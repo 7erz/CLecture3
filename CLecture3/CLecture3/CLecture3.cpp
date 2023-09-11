@@ -1,131 +1,134 @@
 ﻿#include<iostream>
 using namespace std;
 
-#pragma region 접기
-int data = 100;
+#pragma region 클래스
+//사용자 정의 데이터 유형으로 속성과 함수가 포함되어 있으며, 
+//클래스를 통해 객체를 생성하여 접근하고 사용할 수 있는 집합체
 
-namespace A {
-	void Attack() {
-		cout << "A 개발자 Attack()" << endl;;
+//struct 대신 class를 사용
+//변수 속성 정의 가능, 멤버함수 정의 가능( void Attack() 같은 것 )
+//간단하게 말해 속성과 기능
+
+class GameObject {		//클래스 내부,		메모리에 생산된게 아닌 단순한 설계도 느낌
+
+	//접근 지정자
+	/*클래스 내부의 포함되어 있는 속성에 접근 범위를 제한하는 지정자.
+	
+	접근 지정자 : public, protected, private
+
+	public : 클래스 내부와 자기가 상속하고 있는 클래스
+	그리고 클래스 외부에서 접근을 허용하는 지정자
+
+	protected : 클래스 내부와 자기가 상속하고 있는 클래스까지만 접근을 허용하는 지정자
+
+	private : 클래스 내부에서만 접근을 허용하는 지정자
+
+	*/
+
+
+
+public:
+	float x;
+	//기본 접근 지정자 (private)
+	void SendMessage() {
+		//cout << "x : " << x << ", y : " << y << ", z : " << z << endl;
+		cout << "메시지" << endl;
+		z = 300; //private 라서 내부에서만 접근가능
 	}
-}
+protected:
+	double y;		//8		24가 되어서 바이트 패딩이 됨
+private:
+	float z;		//4	+ 4(패딩값)
+	//그래서 y대신 z에 double을 넣음 16이 됨
+		
 
-namespace B {
-	void Attack() {
-		cout << "B 개발자 Attack()" << endl;;
+};
+
+
+#pragma endregion
+
+#pragma region 생성자와 소멸자
+	//생성자
+	//클래스의 인스턴스가 생성된느 시점에서 자동으로 호출되는 특수한 멤버
+
+class Monster {
+private:
+	int health;
+
+	//속성들이 생성되었을때 값을 초기화해줌
+	//자동호출 됨
+public:
+	Monster() {
+		cout << "Monster 생성" << endl;
 	}
-}
+	//생성자의 경우 객체가 생성될 때 단 한번만 호출되며
+	//생성자는 반환형이 존재하지 않기 때문에 
+	//생성자가 호출되기 전에는 객체에 대한 메모리는 할당하지 않음
 
-void Damage(int hp = 100) {
-	hp -= 25;
-	cout << "hp 값 : " << hp << endl;
-}
-//기본 매개변수는 오른쪽에서부터 정의 해야 함 (z 먼저)
-void Move(int x, int y, int z = 10) {
-	cout << "x : " << x << endl;
-	cout << "y : " << y << endl;
-	cout << "z : " << z << endl;
+	//소멸자
+	//객체가 소멸될 때 자동으로 실행되는 클래스의 멤버 함수.
+	~Monster() {
+		cout << "Monster 소멸" << endl;
+	}
 
-}
+	//소멸자는 객체가 메모리에서 해제될 때 단 한번만 호출되며,
+	//소멸자에는 매개변수를 생성하여 사용할 수 없음
+
+
+};
 
 #pragma endregion
 
 
 
 int main() {
-#pragma region 범위 지정 연산자
-	//여러 범위에서 사용되는 식별자를 구분하는데 사용되는 연산자
+#pragma region 클래스
+	GameObject gameobject1;		//클래스 외부
+	GameObject gameobject2;
 
-	//범위 지정 연산자는 전역 변수와 같은 이름의 지역변수가
-	//선언되었을 때 가장 가까운 범위에선언된 변수의 이름을 
-	//사용하는 범위 규칙이 존재하기 때문에 전역 변수가 호출되지 않습니다.
+	gameobject1.SendMessage();
+	gameobject2.SendMessage();
 
-	//int data = 25;
+	//gameObject. 하는 순간 시작주소에서 4씩 넘어감
+	//배열또한 비슷하게 실행됨
 
-	//int data = 100;
-	//std::cout << "지역 변수 data의 값 : " << data << std::endl;
-	//std::cout << "전역 변수 data의 값 : " << ::data << std::endl;
+	cout << sizeof(GameObject) << endl;
 
-
-	//분할 구현
-	//.h		.cpp
-	// 선언		구현
+	//		 [메모리]
+	//		코드 영역		<- 주소
+	//		데이터 영역		(.rodata / init data)
+	//		BSS 영역		
+	//	------컴파일 시점에 메모리 올라감-----
+	//		힙 영역			
+	//		스택 영역		-> gameobject1, gameobject2
+	//	SendMessage의 함수 주소에 gameobject1, gameobject2 클래스가 함수를 호출하고 있음
+	// 매개변수가 없는 것 처럼 보이지만 this라는 함수(자동)가 있어서 자기의 주소로 함수를 호출함
+	// 
 	//
-	// 똑같은 이름 링킹 오류
-	//
-	// include 는 복사 붙여넣기라고 생각하며 ㄴ됨
-	//
 
+	//gameobject1.x = 100;
+	//gameobject2.x = 120;
 
+	//cout << gameobject1.x << endl;
+	//cout << gameobject2.x << endl;
+
+	//gameobject.x     -> 구조체에서는 그냥 되었지만 class에서는 public 이 없으면 안됨.
+	//접근 지정자가 필요함
 #pragma endregion
 
-#pragma region 이름 공간 (namespace)
-	//속성을 구분할 수 있도록 유효 범위를 설정하는 영역
-	// A 의 Attack() / B 의 Attack()
-	// namespace 와 A::Attack()으로 구분 (using)
-	//std 또한 가져와서 해제 할 수 있음
+#pragma region 생성자와 소멸자
+	Monster monster;
 
-	//c#의 경우 Dispose
-	//파일 입출력 할때 using(파일 불러오기){}
-	//리소스 등 이미테이트 디스트로이 사용 (메모리 바로 해제)
+	Monster* ptr = new Monster;		//int * ptr = 주소 저장 포인터		class * ptr = 메모리 주소 저장 8byte
+	//포인터 타입 명시적으로 맞춰줘야함 (new in) X
 
-	//A::Attack();
-	//B::Attack();
-
+	cout << sizeof(ptr) << endl;
+	delete ptr;
 #pragma endregion
 
-#pragma region 기본 매개변수
-	//함수의 매개 변수에 값이 전달되지 않았을 때
-	//기본 값으로 설정되는 매개 변수
 
-	//int hp = 100;
+	
 
-	//Damage();
-	//Move(5, 10);
-	////기본 매개변수가 있는 위치에 다시 새로운 인수를 넣어줄 수 있다.
-	//Move(6, 12, 18);
-
-#pragma endregion
-
-#pragma region 최소공배수
-	//38 과 42의 최소공배수 같이 나눠지는 걸로 + 나머지 숫자까지 다 곱함
-	int x;
-	int y;
-	int top;
-	int gop = 1;
-
-	cout << "x 값 입력 : ";
-	cin >> x;
-
-	cout << "y 값 입력 : ";
-	cin >> y;
-
-
-	if (x > y) {
-		top = x;
-	}
-	else if (x < y){
-		top = y;
-	}
-
-
-	for (int i = 2; i < top; i++) {
-		if (x % i == 0 && y % i == 0) {
-			cout << i <<"로 나눠졌음." << endl;
-			x /= i;
-			y /= i;
-			gop *= i;
-			i--;
-		}
-	}
-
-	cout << "x: " << x << endl;
-	cout << "y: " << y << endl;
-	cout << "최소 공배수 : " << gop * x * y << endl;
-
-
-
-#pragma endregion
 
 
 	return 0;
