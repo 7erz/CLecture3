@@ -129,10 +129,13 @@
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CLecture3.cpp" />
+    <ClCompile Include="Mechanic.cpp" />
+    <ClCompile Include="Vulture.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="20230912 얕은복사 깊은복사.h" />
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Mechanic.h" />
+    <ClInclude Include="Vulture.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
