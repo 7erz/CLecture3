@@ -1,6 +1,2 @@
 ﻿  CLecture3.cpp
-  Mechanic.cpp
-  Vulture.cpp
-C:\Users\leesn\OneDrive\바탕 화면\SBS\CLecture3\CLecture3\CLecture3\Vulture.cpp(13,15): error C2509: 'Attack': 멤버 함수를 'Vulture'에서 선언하지 않았습니다.
-C:\Users\leesn\OneDrive\바탕 화면\SBS\CLecture3\CLecture3\CLecture3\Vulture.h(6,7): message : 'Vulture' 선언을 참조하십시오.
-  코드를 생성하고 있습니다...
+  CLecture3.vcxproj -> C:\Users\leesn\OneDrive\바탕 화면\SBS\CLecture3\CLecture3\x64\Debug\CLecture3.exe

@@ -14,3 +14,8 @@ void Vulture::Attack()
 {
 	cout << "¹úÃÄ °ø°Ý" << endl;
 }
+
+Vulture::~Vulture()
+{
+	cout << "¹úÃÄ »èÁ¦" << endl;
+}
