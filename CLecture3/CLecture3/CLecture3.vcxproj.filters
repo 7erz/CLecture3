@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="헤더 파일\Mechanic">
+      <UniqueIdentifier>{67248cef-6b49-4483-8b03-6400ceb5a4ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Mechanic">
+      <UniqueIdentifier>{3e16e0aa-b1af-4818-88cb-f2d693888f56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Bionic">
+      <UniqueIdentifier>{e07aeadb-f90c-468e-8922-bf994efcac9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Bionic">
+      <UniqueIdentifier>{ad400512-4c6e-4cf5-a396-06e6d5965fa1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CLecture3.cpp">
@@ -21,34 +33,61 @@
     <ClCompile Include="Camera.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Mechanic.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Goliath.cpp">
+      <Filter>소스 파일\Mechanic</Filter>
     </ClCompile>
-    <ClCompile Include="Vulture.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Mechanic.cpp">
+      <Filter>소스 파일\Mechanic</Filter>
     </ClCompile>
     <ClCompile Include="SiegeTank.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Mechanic</Filter>
     </ClCompile>
-    <ClCompile Include="Goliath.cpp">
-      <Filter>소스 파일</Filter>
+    <ClCompile Include="Vulture.cpp">
+      <Filter>소스 파일\Mechanic</Filter>
+    </ClCompile>
+    <ClCompile Include="Marine.cpp">
+      <Filter>소스 파일\Bionic</Filter>
+    </ClCompile>
+    <ClCompile Include="Firebat.cpp">
+      <Filter>소스 파일\Bionic</Filter>
+    </ClCompile>
+    <ClCompile Include="Ghost.cpp">
+      <Filter>소스 파일\Bionic</Filter>
+    </ClCompile>
+    <ClCompile Include="Medic.cpp">
+      <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
-    <ClInclude Include="Mechanic.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Goliath.h">
+      <Filter>헤더 파일\Mechanic</Filter>
     </ClInclude>
-    <ClInclude Include="Vulture.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Mechanic.h">
+      <Filter>헤더 파일\Mechanic</Filter>
     </ClInclude>
     <ClInclude Include="SiegeTank.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\Mechanic</Filter>
     </ClInclude>
-    <ClInclude Include="Goliath.h">
-      <Filter>헤더 파일</Filter>
+    <ClInclude Include="Vulture.h">
+      <Filter>헤더 파일\Mechanic</Filter>
+    </ClInclude>
+    <ClInclude Include="Unit.h">
+      <Filter>헤더 파일\Bionic</Filter>
+    </ClInclude>
+    <ClInclude Include="Marine.h">
+      <Filter>헤더 파일\Bionic</Filter>
+    </ClInclude>
+    <ClInclude Include="Firebat.h">
+      <Filter>헤더 파일\Bionic</Filter>
+    </ClInclude>
+    <ClInclude Include="Ghost.h">
+      <Filter>헤더 파일\Bionic</Filter>
+    </ClInclude>
+    <ClInclude Include="Medic.h">
+      <Filter>헤더 파일\Bionic</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
