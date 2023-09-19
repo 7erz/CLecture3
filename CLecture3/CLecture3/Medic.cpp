@@ -1,5 +1,11 @@
 #include "Medic.h"
 
+Medic::Medic() {
+	maxHp = 60;
+	health = 60;
+	unitName = "¸Þµñ";
+}
+
 void Medic::Skill()
 {
 	cout << "Èú" << endl;
@@ -8,7 +14,7 @@ void Medic::Skill()
 void Medic::SetHp(int value)
 {
 	//0~100»çÀÌÀÇ °ª¸¸
-	if (value >= 0 && value <= 100) {
+	if (value >= 0 && value <= maxHp) {
 		health = value;
 	}
 	else {
@@ -19,4 +25,19 @@ void Medic::SetHp(int value)
 int Medic::GetHp()
 {
 	return health;
+}
+
+void Medic::setMaxHp()
+{
+	health = maxHp;
+}
+
+int Medic::GetMaxHp()
+{
+	return maxHp;
+}
+
+string Medic::GetName()
+{
+	return unitName;
 }

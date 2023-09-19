@@ -1,5 +1,11 @@
 #include "Firebat.h"
 
+Firebat::Firebat() {
+	maxHp = 50;
+	health = 50;
+	unitName = "ÆÄÀÌ¾îºª";
+}
+
 void Firebat::Skill()
 {
 	cout << "½ºÆÀÆÑ" << endl;
@@ -8,7 +14,7 @@ void Firebat::Skill()
 void Firebat::SetHp(int value)
 {
 	//0~100»çÀÌÀÇ °ª¸¸
-	if (value >= 0 && value <= 100) {
+	if (value >= 0 && value <= maxHp) {
 		health = value;
 	}
 	else {
@@ -19,4 +25,19 @@ void Firebat::SetHp(int value)
 int Firebat::GetHp()
 {
 	return health;
+}
+
+void Firebat::setMaxHp()
+{
+	health = maxHp;
+}
+
+int Firebat::GetMaxHp()
+{
+	return maxHp;
+}
+
+string Firebat::GetName()
+{
+	return unitName;
 }

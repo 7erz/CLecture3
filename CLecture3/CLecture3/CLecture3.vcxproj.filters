@@ -57,6 +57,9 @@
     <ClCompile Include="Medic.cpp">
       <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
+    <ClCompile Include="Unit.cpp">
+      <Filter>소스 파일\Bionic</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h">

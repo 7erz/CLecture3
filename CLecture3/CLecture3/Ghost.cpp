@@ -1,5 +1,11 @@
 #include "Ghost.h"
 
+Ghost::Ghost() {
+	maxHp = 45;
+	health = 45;
+	unitName = "고스트";
+}
+
 void Ghost::Skill()
 {
 	cout << "클로킹" << endl;
@@ -8,7 +14,7 @@ void Ghost::Skill()
 void Ghost::SetHp(int value)
 {
 	//0~100사이의 값만
-	if (value >= 0 && value <= 100) {
+	if (value >= 0 && value <= maxHp) {
 		health = value;
 	}
 	else {
@@ -19,4 +25,19 @@ void Ghost::SetHp(int value)
 int Ghost::GetHp()
 {
 	return health;
+}
+
+void Ghost::setMaxHp()
+{
+	health = maxHp;
+}
+
+int Ghost::GetMaxHp()
+{
+	return maxHp;
+}
+
+string Ghost::GetName()
+{
+	return unitName;
 }

@@ -136,6 +136,7 @@
     <ClCompile Include="Mechanic.cpp" />
     <ClCompile Include="Medic.cpp" />
     <ClCompile Include="SiegeTank.cpp" />
+    <ClCompile Include="Unit.cpp" />
     <ClCompile Include="Vulture.cpp" />
   </ItemGroup>
   <ItemGroup>

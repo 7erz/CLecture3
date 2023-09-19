@@ -1,5 +1,11 @@
 #include "Marine.h"
 
+Marine::Marine() {
+	maxHp = 40;
+	health = 40;
+	unitName = "ÇØº´";
+}
+
 void Marine::Skill()
 {
 	cout << "½ºÆÀÆÑ" << endl;
@@ -8,7 +14,7 @@ void Marine::Skill()
 void Marine::SetHp(int value)
 {
 	//0~100»çÀÌÀÇ °ª¸¸
-	if (value >= 0 && value <= 100) {
+	if (value >= 0 && value <= maxHp) {
 		health = value;
 	}
 	else {
@@ -21,4 +27,19 @@ void Marine::SetHp(int value)
 int Marine::GetHp()
 {
 	return health;
+}
+
+void Marine::setMaxHp()
+{
+	health = maxHp;
+}
+
+int Marine::GetMaxHp()
+{
+	return maxHp;
+}
+
+string Marine::GetName()
+{
+	return unitName;
 }
