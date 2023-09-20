@@ -1,4 +1,2 @@
 ﻿  CLecture3.cpp
-C:\Users\leesn\OneDrive\바탕 화면\SBS\CLecture3\CLecture3\CLecture3\CLecture3.cpp(1,1): warning C4819: 현재 코드 페이지(949)에서 표시할 수 없는 문자가 파일에 들어 있습니다. 데이터가 손실되지 않게 하려면 해당 파일을 유니코드 형식으로 저장하십시오.
-C:\Users\leesn\OneDrive\바탕 화면\SBS\CLecture3\CLecture3\CLecture3\CLecture3.cpp(48): warning C4172: 지역 변수 또는 임시: data의 주소를 반환하고 있습니다.
   CLecture3.vcxproj -> C:\Users\leesn\OneDrive\바탕 화면\SBS\CLecture3\CLecture3\x64\Debug\CLecture3.exe
