@@ -132,6 +132,7 @@
     <ClCompile Include="Firebat.cpp" />
     <ClCompile Include="Ghost.cpp" />
     <ClCompile Include="Goliath.cpp" />
+    <ClCompile Include="LinkedList.cpp" />
     <ClCompile Include="Marine.cpp" />
     <ClCompile Include="Mechanic.cpp" />
     <ClCompile Include="Medic.cpp" />
@@ -144,6 +145,7 @@
     <ClInclude Include="Firebat.h" />
     <ClInclude Include="Ghost.h" />
     <ClInclude Include="Goliath.h" />
+    <ClInclude Include="LinkedList.h" />
     <ClInclude Include="Marine.h" />
     <ClInclude Include="Mechanic.h" />
     <ClInclude Include="Medic.h" />
