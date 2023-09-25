@@ -31,12 +31,21 @@
     <Filter Include="소스 파일\Computer">
       <UniqueIdentifier>{6c3b1f89-ad7c-49f6-8a6d-1c55ff0e6017}</UniqueIdentifier>
     </Filter>
+    <Filter Include="헤더 파일\ETC">
+      <UniqueIdentifier>{152043d8-c2a3-409e-a616-eb259cad667d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\ETC">
+      <UniqueIdentifier>{6f0358de-7274-4a70-855b-a124d94158c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Inventory">
+      <UniqueIdentifier>{c3520960-6d4d-46c2-ab4e-d2daae8ca2ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="헤더 파일\Inventory">
+      <UniqueIdentifier>{9af8462e-c39a-4def-a5a1-f03ab46ccedc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="CLecture3.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Camera.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="Goliath.cpp">
@@ -66,9 +75,6 @@
     <ClCompile Include="Unit.cpp">
       <Filter>소스 파일\Bionic</Filter>
     </ClCompile>
-    <ClCompile Include="LinkedList.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Mouse.cpp">
       <Filter>소스 파일\Computer</Filter>
     </ClCompile>
@@ -82,16 +88,25 @@
       <Filter>소스 파일\Computer</Filter>
     </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkedList.cpp">
+      <Filter>소스 파일\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>소스 파일\ETC</Filter>
     </ClCompile>
     <ClCompile Include="Bank.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\ETC</Filter>
+    </ClCompile>
+    <ClCompile Include="Inventory.cpp">
+      <Filter>소스 파일\Inventory</Filter>
+    </ClCompile>
+    <ClCompile Include="Item.cpp">
+      <Filter>소스 파일\Inventory</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Camera.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Goliath.h">
       <Filter>헤더 파일\Mechanic</Filter>
     </ClInclude>
@@ -119,9 +134,6 @@
     <ClInclude Include="Medic.h">
       <Filter>헤더 파일\Bionic</Filter>
     </ClInclude>
-    <ClInclude Include="LinkedList.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Component.h">
       <Filter>헤더 파일\Computer</Filter>
     </ClInclude>
@@ -134,11 +146,23 @@
     <ClInclude Include="Mouse.h">
       <Filter>헤더 파일\Computer</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Bank.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>헤더 파일\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>헤더 파일\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>헤더 파일\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>헤더 파일\ETC</Filter>
+    </ClInclude>
+    <ClInclude Include="Inventory.h">
+      <Filter>헤더 파일\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>헤더 파일\Inventory</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
