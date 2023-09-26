@@ -135,6 +135,7 @@
     <ClCompile Include="Firebat.cpp" />
     <ClCompile Include="Ghost.cpp" />
     <ClCompile Include="Goliath.cpp" />
+    <ClCompile Include="InputKey.cpp" />
     <ClCompile Include="Inventory.cpp" />
     <ClCompile Include="Item.cpp" />
     <ClCompile Include="Keyboard.cpp" />
@@ -156,6 +157,7 @@
     <ClInclude Include="Firebat.h" />
     <ClInclude Include="Ghost.h" />
     <ClInclude Include="Goliath.h" />
+    <ClInclude Include="InputKey.h" />
     <ClInclude Include="Inventory.h" />
     <ClInclude Include="Item.h" />
     <ClInclude Include="Keyboard.h" />

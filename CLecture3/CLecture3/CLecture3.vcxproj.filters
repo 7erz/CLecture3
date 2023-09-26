@@ -105,6 +105,9 @@
     <ClCompile Include="Item.cpp">
       <Filter>소스 파일\Inventory</Filter>
     </ClCompile>
+    <ClCompile Include="InputKey.cpp">
+      <Filter>소스 파일\Inventory</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Goliath.h">
@@ -162,6 +165,9 @@
       <Filter>헤더 파일\Inventory</Filter>
     </ClInclude>
     <ClInclude Include="Item.h">
+      <Filter>헤더 파일\Inventory</Filter>
+    </ClInclude>
+    <ClInclude Include="InputKey.h">
       <Filter>헤더 파일\Inventory</Filter>
     </ClInclude>
   </ItemGroup>

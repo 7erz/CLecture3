@@ -26,5 +26,7 @@ public:
 	void SetCheck(bool check);
 	bool GetCheck();
 
+	
+
 };
 
