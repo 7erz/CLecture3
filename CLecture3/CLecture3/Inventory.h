@@ -11,6 +11,7 @@ private:
 
 	int lineX;
 	int selectIndex;
+
 	Item* items;
 
 
@@ -20,5 +21,8 @@ public:
 	void MakeInven();
 
 	void AddItem();
+
+	void selNum(InputKey inputkey);
+	void ShowItem();
 };
 

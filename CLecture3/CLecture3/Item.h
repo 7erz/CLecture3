@@ -26,6 +26,8 @@ public:
 	void SetCheck(bool check);
 	bool GetCheck();
 
+	void SetItem( int, const char* );
+	void Inform();
 	
 
 };
